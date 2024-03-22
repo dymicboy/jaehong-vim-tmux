@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "installing acd_cli"
+echo "Installing advanced cd..."
 
 SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
 
@@ -15,3 +15,5 @@ sudo ln -sf "$SCRIPT_PATH/acd_func.sh" ~/.acd_func.sh
 
 # Add acd_cli to bashrc
 echo "source ~/.acd_func.sh" >> ~/.bashrc
+
+echo "Installing advanced cd finished!"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Install neovim and configurations"
+echo "Installing neovim and configurations..."
 
 SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
 
@@ -49,3 +49,5 @@ npm -C ~/.config/coc/extensions install
 if ! grep -q "alias vim='nvim'" ~/.bashrc; then
     echo "alias vim='nvim'" >> ~/.bashrc
 fi
+
+echo "Installing neovim and configurations finished!"
