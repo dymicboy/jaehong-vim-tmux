@@ -3,6 +3,7 @@
 ## Warning
  - Install script will overwrite your existing configuration files.
  - This is only for Linux.
+ - You need copilot token to use copilot.vim. Please remove it on `nvim/init.vim` if you don't have it.
 
 ## Installation
  - Clone this repository.
