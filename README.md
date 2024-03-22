@@ -2,6 +2,7 @@
 
 ## Warning
  - Install script will overwrite your existing configuration files.
+ - This is only for Linux.
 
 ## Installation
  - Clone this repository.
