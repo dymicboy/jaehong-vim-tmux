@@ -13,7 +13,10 @@
 ### Vim(NeoVim)
  - Install with `bash nvim/install_jaehong_nvim.sh`
 
-#### Plugins
+#### Vim Plugins
+ - fugitive: Git wrapper for vim. (:Git blame, :Git mergetool, etc.)
+
+#### NeoVim Plugins
  - vim-prettier: Format code with prettier on save for json, javascript, typescript, css, scss, html, markdown.
  - vim-airline: Status line to show current mode, file path, git branch, etc.
  - git-messenger: Show git commit message. (Use `:GitMessenger` to show commit message)

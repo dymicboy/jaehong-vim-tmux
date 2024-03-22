@@ -7,6 +7,11 @@ SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
 # Install vim
 sudo apt-get install vim
 
+# Install fugitive
+mkdir -p ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start
+vim -u NONE -c "helptags fugitive/doc" -c q
+
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
