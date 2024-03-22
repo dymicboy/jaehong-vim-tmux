@@ -32,6 +32,7 @@ nvim +PlugInstall +qall
 # Check if nodejs is installed and install nodejs if it's not installed.
 if ! command -v node &> /dev/null; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    source ~/.bashrc
     nvm install 20
     source ~/.bashrc
 fi

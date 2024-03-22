@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Shows pid of a process that has a given port open
 lsof_port() { sudo lsof -i :"$1"; }
 
