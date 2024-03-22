@@ -10,7 +10,20 @@
 
 ## Components
 
-### Vim
+### Vim(NeoVim)
+ - Install with `bash nvim/install_jaehong_nvim.sh`
+
+#### Plugins
+ - vim-prettier: Format code with prettier on save for json, javascript, typescript, css, scss, html, markdown.
+ - vim-airline: Status line to show current mode, file path, git branch, etc.
+ - git-messenger: Show git commit message. (Use `:GitMessenger` to show commit message)
+ - kanagawa.nvim: Color scheme for nvim.
+ - copilot.vim: Copilot for vim.
+ - coc.nvim: Intellisense engine for vim.
+     - coc-json
+     - coc-go
+     - coc-yaml
+     - coc-python
 
 ### Tmux
  - Install with `bash tmux/install_jaehong_tmux.sh`
