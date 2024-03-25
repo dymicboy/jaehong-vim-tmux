@@ -4,7 +4,7 @@
 lsof_port() { sudo lsof -i :"$1"; }
 
 # Shows list of files that contain a given string
-af() { find . ! -path "./build" -name "*$1*";}
+af() { ag -g "$1";}
 
 # Shows list of branches sorted by committer date
 alias git_branch="git branch --sort=-committerdate"

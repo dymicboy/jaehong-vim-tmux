@@ -16,8 +16,8 @@ vim -u NONE -c "helptags fugitive/doc" -c q
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Install latest neovim with https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz 
+# Install neovim v0.9.5 with https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz 
 tar xzf nvim-linux64.tar.gz
 sudo cp -r nvim-linux64/* /usr/local/
 rm -rf nvim-linux64 nvim-linux64.tar.gz
@@ -32,9 +32,8 @@ nvim +PlugInstall +qall
 # Check if nodejs is installed and install nodejs if it's not installed.
 if ! command -v node &> /dev/null; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-    source ~/.bashrc
-    nvm install 20
-    source ~/.bashrc
+    source ~/.nvm/nvm.sh
+    nvm install 20.11.1
 fi
 
 # Copy coc-settings.json

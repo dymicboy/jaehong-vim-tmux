@@ -1,19 +1,23 @@
 # jaehong-vim-tmux
 
 ## Warning
- - Install script will overwrite your existing configuration files.
  - This is only for Linux.
- - You need copilot token to use copilot.vim. Please remove it on `nvim/init.vim` if you don't have it.
+ - You need copilot token to use copilot.vim. Please remove it on `nvim/init.vim` if you don't have the token.
+ - This will overwrite
+     - .agignore
+     - neovim configuration files
+     - coc configuration files
+     - tmux configuration files
 
 ## Installation
  - Clone this repository.
- - To install all components, run `bash install.sh`.
+ - To install all components, run `bash {repository path}/install.sh`.
  - You can install each component separately by running each install script in each directory.
 
 ## Components
 
-### Vim(NeoVim)
- - Install with `bash nvim/install_jaehong_nvim.sh`
+### NeoVim
+ - Install with `bash {repository path}/nvim/install_jaehong_nvim.sh`
 
 #### Vim Plugins
  - fugitive: Git wrapper for vim. (:Git blame, :Git mergetool, etc.)
@@ -31,7 +35,7 @@
      - coc-python
 
 ### Tmux
- - Install with `bash tmux/install_jaehong_tmux.sh`
+ - Install with `bash {repository path}/tmux/install_jaehong_tmux.sh`
  - Based on [gpakosz/.tmux](https://github.com/gpakosz/.tmux)
  - Applied vim for exploring terminal.
  - Applied vim for moving between panes.
@@ -39,6 +43,6 @@
  - Refer to [tmux-cheatsheet](https://tmuxcheatsheet.com/) for more information.
 
  ### Advanced cd
-  - Install with `bash advanced_cd/install_acd.sh`
+  - Install with `bash {repository path}/advanced_cd/install_acd.sh`
   - `cd --` to show previous directory.
   - `cd -{number}` to move to previous directory.

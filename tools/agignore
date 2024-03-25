@@ -1,0 +1,8 @@
+*.svg
+*.map
+*.min.js
+*.dae
+*.sum
+*.hex
+*.csv
+*.tsbuildinfo
