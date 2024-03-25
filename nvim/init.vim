@@ -23,8 +23,9 @@ call plug#end()
 " vim coc configs
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 " You can choose one of [kanagawa, kanagawa-wave, kanagawa-dragon, kanagawa-lotus]
 colorscheme kanagawa
+
+highlight Visual guibg=#686940
 
 autocmd BufWritePost,BufNewFile BUILD silent !buildifier %
