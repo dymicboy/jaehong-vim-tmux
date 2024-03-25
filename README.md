@@ -1,5 +1,21 @@
 # jaehong-vim-tmux
 
+## Overview
+ - This repository is for setting up vim and tmux for jaehong's personal use.
+ - This repository includes
+     - NeoVim configuration
+     - Tmux configuration
+     - Advanced cd
+     - Other useful scripts including silversearcher-ag and its ignore.
+
+### Overall Settings
+ - nu, rnum is set by default in vim.
+ - buildifier will run on default for `BUILD` files.
+ - neovim is based on kanagawa color scheme. (you can change color scheme by editing `nvim/init.vim`)
+ - Auto completion with coc and copilot is applied.
+     - coc will show suggestions with popup and you can apply it with `Enter`.
+     - copilot will show suggestions on same line on vim insert mode and you can apply it with `Tab`.
+
 ## Warning
  - This is only for Linux.
  - You need copilot token to use copilot.vim. Please remove it on `nvim/init.vim` if you don't have the token.
@@ -18,6 +34,7 @@
 
 ### NeoVim
  - Install with `bash {repository path}/nvim/install_jaehong_nvim.sh`
+ - vim is aliased to nvim.
 
 #### Vim Plugins
  - fugitive: Git wrapper for vim. (:Git blame, :Git mergetool, etc.)
