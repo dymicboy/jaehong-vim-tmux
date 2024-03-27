@@ -4,6 +4,28 @@ echo "Installing neovim and configurations..."
 
 SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
 
+# Update golang to 1.22.1
+# Get go1.22.1.linux-amd64.tar.gz from https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go
+wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
+rm -f go1.22.1.linux-amd64.tar.gz
+
+# add go to PATH to .profile
+if ! grep -q "export PATH=\$PATH:/usr/local/go/bin" ~/.profile; then
+    echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
+fi
+# add go related environment variables to .profile
+if ! grep -q "export GOPATH=\$HOME/go/bin" ~/.profile; then
+    echo "export GOPATH=\$HOME/go/bin" >> ~/.profile
+fi
+
+# source .profile
+source ~/.profile
+
+# install gopls
+go install golang.org/x/tools/gopls@latest
+
 # Install vim
 sudo apt-get install vim
 
