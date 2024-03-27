@@ -1,12 +1,13 @@
 {
   "languageserver": {
     "go": {
-      "command": "gopls",
+      "command": "~/go/bin/gopls",
       "rootPatterns": ["go.mod"],
       "trace.server": "verbose",
       "filetypes": ["go"]
     }
   },
   "yaml.format.enable": true,
-  "yaml.completion": true
+  "yaml.completion": true,
+  "go.goplsPath": "~/go/bin/gopls"
 }

@@ -24,7 +24,7 @@ fi
 source ~/.profile
 
 # install gopls
-go install golang.org/x/tools/gopls@latest
+go install golang.org/x/tools/gopls@v0.15.2
 
 # Install vim
 sudo apt-get install vim
