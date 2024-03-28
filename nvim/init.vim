@@ -17,6 +17,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rebelot/kanagawa.nvim'
 Plug 'github/copilot.vim'
+Plug 'fatih/vim-go'
 call plug#end()
 
 
