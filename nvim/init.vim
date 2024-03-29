@@ -30,3 +30,5 @@ colorscheme kanagawa
 highlight Visual guibg=#686940
 
 autocmd BufWritePost,BufNewFile BUILD silent !buildifier %
+
+let g:copilot_workspace_folders = ["~/repositories/pennybot"]
