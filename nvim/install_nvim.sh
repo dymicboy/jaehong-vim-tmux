@@ -4,12 +4,12 @@ echo "Installing neovim and configurations..."
 
 SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
 
-# Update golang to 1.22.1
-# Get go1.22.1.linux-amd64.tar.gz from https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
+# Update golang to 1.23.2
+# Get go1.23.2.linux-amd64.tar.gz from https://go.dev/dl/go1.23.2.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go
-wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
-rm -f go1.22.1.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.23.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz
+rm -f go1.23.2.linux-amd64.tar.gz
 
 # add go to PATH to .profile
 if ! grep -q "export PATH=\$PATH:/usr/local/go/bin" ~/.profile; then
@@ -23,8 +23,11 @@ fi
 # source .profile
 source ~/.profile
 
-# install gopls
+# install go language server: gopls
 go install golang.org/x/tools/gopls@v0.15.2
+
+# install python language server: python-lsp-server
+pip3 install python-lsp-server
 
 # Install vim
 sudo apt-get install vim
@@ -57,16 +60,6 @@ if ! command -v node &> /dev/null; then
     source ~/.nvm/nvm.sh
     nvm install 20.11.1
 fi
-
-# Copy coc-settings.json
-sudo ln -sf "$SCRIPT_PATH/coc-settings.json" ~/.config/nvim/coc-settings.json
-
-# Copy coc package.json
-mkdir -p ~/.config/coc/extensions
-sudo ln -sf "$SCRIPT_PATH/coc-package.json" ~/.config/coc/extensions/package.json
-
-# Install coc packages
-npm -C ~/.config/coc/extensions install
 
 # Add alias vim as nvim if there's no alias for vim.
 if ! grep -q "alias vim='nvim'" ~/.bashrc; then
